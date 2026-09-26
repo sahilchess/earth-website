@@ -1,0 +1,128 @@
+:root {
+  --forest: #2d5a3d;
+  --sage: #8ba888;
+  --sand: #e8dcc4;
+  --clay: #b8886b;
+  --bark: #5c4033;
+  --cream: #f5f0e6;
+  --text: #2b2420;
+}
+
+
+
+h1{
+  padding:10px;
+
+  animation: h1-ani 1s ease-out forwards;
+  animation-iteration-count: 5;
+}
+@keyframes h1-ani {
+  0%{
+
+    color:var(--bark)
+  }
+  50%{
+    color:var(--clay);
+  }
+  100%{
+      color:var(--bark);
+  }
+}
+
+header{
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.btn-img{
+  height:250px;
+  width:250px;
+  border-radius: 50%;
+}
+button{
+  height:300px;
+  width:300px;
+  border-radius: 50%;
+
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+button:hover {
+  animation: button-rotate 2s linear infinite;
+}
+button:active {
+  animation: button-color-change 2s linear infinite;
+}
+@keyframes button-color-change {
+  0% {
+    background-color: var(--clay);
+    transform: rotate(0deg);
+  }
+  50%{
+    background-color: var(--bark);
+  }
+  100% {
+    background-color: var(--clay);
+    transform: rotate(360deg);
+  }
+}
+@keyframes button-rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+body{
+  background-color: var(--forest);
+  font-family: Helvetica Neue ;
+}
+
+
+h1, h2, h3, h4, h5, h6, p, footer, main, header {
+                     font-family: "Google Sans Code", monospace;
+                     font-optical-sizing: auto;
+                     font-weight: 400;
+                     font-style: normal;
+                     font-variation-settings:
+                       "MONO" 1;
+                   }
+
+h1{
+  font-size: 50px;
+}
+
+footer{
+  background-color: var(--clay);
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+
+
+  animation: footer-ani 1s ease-out forwards;
+  animation-iteration-count: 5;
+}
+@keyframes footer-ani{
+  0%{
+    background-color:var(--sage)
+  }
+  50%{
+    background-color:var(--forest);
+  }
+  100%{
+    background-color:var(--sage);
+  }
+}
